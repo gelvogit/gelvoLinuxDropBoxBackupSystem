@@ -33,34 +33,5 @@
                         <folder_split_exclude>
                         </folder_split_exclude>
                 </folder>
-		<folder>
-			<folder_label>WWW</folder_label>
-		        <folder_path>/var/www/</folder_path>
-		        <folder_split>y</folder_split>
-			<folder_split_exclude>
-				<exclude>TODELETE</exclude>
-			</folder_split_exclude>
-		</folder>
-		<folder>
-			<folder_label>HOMES</folder_label>
-		        <folder_path>/home/</folder_path>
-		        <folder_split>y</folder_split>
-		        <folder_split_exclude>
-			</folder_split_exclude>
-		</folder>
-		<folder>
-			<folder_label>OPT</folder_label>
-		        <folder_path>/opt/</folder_path>
-		        <folder_split>n</folder_split>
-		        <folder_split_exclude>
-			</folder_split_exclude>
-		</folder>
-		<folder>
-			<folder_label>ETC</folder_label>
-		        <folder_path>/etc/</folder_path>
-		        <folder_split>n</folder_split>
-		        <folder_split_exclude>
-			</folder_split_exclude>
-		</folder>
 	</folder_list>
 </nubackups>
