@@ -1,0 +1,66 @@
+<nubackups>
+	<config>
+		<archive_label>GELVOTEST</archive_label>
+		<local_folder>/data/backups/</local_folder> <!-- ensure that this has both a begining and trailing forward slash -->
+		<tar_exe>/bin/tar</tar_exe>
+
+                <dropbox_chunksize>4194304</dropbox_chunksize> <!-- 1024 * 1024 * 4 -->
+
+		<email_server>smtp.gmail.com</email_server>
+                <email_to>shane@gelven.com</email_to>
+                <email_from>linuxdropboxbackup@gmail.com</email_from>
+                <email_from_name>Fender Black</email_from_name>
+                <email_secure>ssl</email_secure> <!-- ssl or {empty} -->
+                <email_auth>y</email_auth> <!-- y or n -->
+                <email_port>465</email_port>
+                <email_username>linuxdropboxbackup@gmail.com</email_username>
+                <email_password>FenderBlackTop</email_password>
+
+		<mysql>y</mysql> <!-- y or n -->
+		<mysql_host>localhost</mysql_host> 
+                <mysql_exe>mysqldump --add-drop-table --single-transaction --force </mysql_exe>
+                <mysql_username>root</mysql_username>
+                <mysql_password>CutlassKatana69</mysql_password> 
+
+	<mysql_query>SELECT SCHEMA_NAME AS Dname FROM SCHEMATA WHERE SCHEMA_NAME NOT IN ('information_schema','mysql','performance_schema','phpmyadmin')</mysql_query> 
+                <!-- must use information_schema database and call the table name Dname -->
+	</config>
+	<folder_list>
+		<folder>
+                        <folder_label>CRONS</folder_label>
+                        <folder_path>/var/spool/cron/</folder_path>
+                        <folder_split>n</folder_split>
+                        <folder_split_exclude>
+                        </folder_split_exclude>
+                </folder>
+		<folder>
+			<folder_label>WWW</folder_label>
+		        <folder_path>/var/www/</folder_path>
+		        <folder_split>y</folder_split>
+			<folder_split_exclude>
+				<exclude>TODELETE</exclude>
+			</folder_split_exclude>
+		</folder>
+		<folder>
+			<folder_label>HOMES</folder_label>
+		        <folder_path>/home/</folder_path>
+		        <folder_split>y</folder_split>
+		        <folder_split_exclude>
+			</folder_split_exclude>
+		</folder>
+		<folder>
+			<folder_label>OPT</folder_label>
+		        <folder_path>/opt/</folder_path>
+		        <folder_split>n</folder_split>
+		        <folder_split_exclude>
+			</folder_split_exclude>
+		</folder>
+		<folder>
+			<folder_label>ETC</folder_label>
+		        <folder_path>/etc/</folder_path>
+		        <folder_split>n</folder_split>
+		        <folder_split_exclude>
+			</folder_split_exclude>
+		</folder>
+	</folder_list>
+</nubackups>
