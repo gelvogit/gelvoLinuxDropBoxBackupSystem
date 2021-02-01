@@ -16,6 +16,10 @@ First you need to setup the Dropbox API
 	- select an app name
 
 	Copy you App key and App secret
+
+	- Under the permissions tab, make sure you have the following ticked:
+	files.metadata.write
+	files.content.write
 	
 
 3) Edit  webroot/index.php and place the following settings: 
