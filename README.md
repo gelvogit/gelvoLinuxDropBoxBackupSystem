@@ -5,8 +5,10 @@ This system will allow you to backup your folders and mysql databases and store 
 
 Install
 =======
+change to folder 'code' and type 'composer install'
 
-First you need to setup the Dropbox API
+Dropbox API config
+==================
 
 1) Goto https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps  ( DropBox Developer Console )
 
@@ -20,6 +22,8 @@ First you need to setup the Dropbox API
 	- Under the permissions tab, make sure you have the following ticked:
 	files.metadata.write
 	files.content.write
+
+	SET SCOPES/PERMISSIONS BEFORE CALLING DOING STEP 4!!!!
 	
 
 3) Edit  webroot/index.php and place the following settings: 
