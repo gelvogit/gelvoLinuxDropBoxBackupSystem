@@ -1,9 +1,9 @@
 <?php
-	$app_key   			= 'gujojudmrgd1ivo';
-        $app_secret  			= '8yftbcslx4cffeg';
-        $app_access_token   		= 'sl.Ana5mFvb2L_THn-cTLcD9CeKpw6PA8J0jEyN2UC2tqJDsjHpaW_9iQQVJnOEMsQr08LQFKKrOAamr-DUd1_0RE7ttEsrwCjnMxZoIDcIytDjAyRjLL6rFji5VrHX7vt7MACTit8';
-	$app_expires_in			= '14400';	
-	$app_refresh_token		= 'OB5VFWhhIrQAAAAAAAAAAXk_IKSCKmPdXIoXx6e_zOBTw6VpL-CNnLxeTtFk08vz';
+	$app_key   			= '';
+        $app_secret  			= '';
+        $app_access_token   		= '';
+	$app_expires_in			= '';	
+	$app_refresh_token		= '';
 function getAppSettings() {
 	$filename                       = __DIR__ . '/dropbox_settings.db';
 	if ( file_exists($filename) ) {

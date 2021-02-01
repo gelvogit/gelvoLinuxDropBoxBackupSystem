@@ -1,6 +1,6 @@
 <?php
-	$app_key                        = 'gujojudmrgd1ivo';
-        $app_secret                     = '8yftbcslx4cffeg';
+	$app_key                        = '';
+        $app_secret                     = '';
 
 //////////////////////////////////////////////////////////////////////
 	ini_set('display_errors', 'On');
