@@ -1,5 +1,5 @@
 # gelvoLinuxDropBoxBackupSystem
-Welcome to the Gelvo Linux Drop Box Backup System
+Welcome to the Gelvo Linux DropBox Backup System
 
 This system will allow you to backup your folders and mysql databases and store the backup in your DropBox account.
 
@@ -23,8 +23,7 @@ Dropbox API config
 	files.metadata.write
 	files.content.write
 
-	SET SCOPES/PERMISSIONS BEFORE CALLING DOING STEP 4!!!!
-	
+	SET PERMISSIONS BEFORE DOING STEP 4!!!!
 
 3) Edit  webroot/index.php and place the following settings: 
 
@@ -64,4 +63,4 @@ Setup
 =====
 1) Edit backupconfig.xml
 
-2) add -> backuprun.sh to your cron all all call manually from the command line.
+2) add -> backuprun.sh to your cron or call manually from the command line.
