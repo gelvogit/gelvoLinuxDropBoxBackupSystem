@@ -71,50 +71,6 @@ function oauthRefresh() {
 	updatestorage($result->access_token, $result->expires_in);
 	return getAppSettings();	
 }
-function appCurlDropBox( $url, $request = array(), $user_auth = false ) {
-	$app_settings                   = oauthRefresh();
-	$app_key                        = $app_settings['app_key'];
-	$app_secret                  	= $app_settings['app_secret'];	
-
-	$headers    			= array();
-    	$headers[]  			= "Authorization: Bearer $app_token";
-	$headers[]  			= "Content-Type: application/json";
-
-	//$post_fields           		= json_encode($request);
-	$post_fields			= $request;
-
-    	$ch             		= curl_init();
-    	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POST, 1);	
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $post_fields);
-
-    	//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	//if ( true === $user_auth ) {
-//		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-//		curl_setopt($ch, CURLOPT_USERPWD, "$app_key:$app_secret");
-	//}
-
-	curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-
-	$result         		= curl_exec($ch);
-
-echo "\n\n";
-echo $result;
-echo "\n\n";
-$information = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-print_r($information);
-echo "\n\n";
-die();
-
-	try {
-        	$resultAry  		= json_decode($result,true);
-    	} catch (Exception $e) {
-        	$resultAry 		= array();
-    	}
-    	curl_close ($ch);
-    	return $resultAry;
-}
 function bootstrapStorage() {
 	$filename 			= __DIR__ . '/dropbox_settings.db';
 	@unlink($filename);
