@@ -193,13 +193,6 @@ function dropbox_backup($backupSessionObj, $dropbox) {
 
 		$this_local_file 	= $local_folder.$file;
 		$this_destination_file 	= $dest_folder."/".$file;
-
-echo "\n Debug start ";
-echo "\n local : $this_local_file ";
-echo "\n remote : $this_destination_file ";
-
-
-
 		$filesize		= filesize($this_local_file);	
 
 		if ( $filesize <= $chunksize ) {
@@ -207,10 +200,6 @@ echo "\n remote : $this_destination_file ";
 		} else {
 			$file = $dropbox->uploadChunked($this_local_file, $this_destination_file, $filesize, $chunksize, ['autorename' => false]);
 		}
-
-print_r($file);
-echo "\n Debug end ";	
-
 
 		if ( $file->getSize() !== $filesize ) { 
 			logger_backup("dropbox_backup::Upload Problem - filesize mismatch: $file");
