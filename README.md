@@ -64,3 +64,8 @@ Setup
 1) Edit backupconfig.xml
 
 2) add -> backuprun.sh to your cron or call manually from the command line.
+
+License
+=======
+GNU GENERAL PUBLIC LICENSE Version 3
+
