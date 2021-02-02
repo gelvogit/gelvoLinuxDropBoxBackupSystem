@@ -69,3 +69,6 @@ License
 =======
 GNU GENERAL PUBLIC LICENSE Version 3
 
+Credits
+======
+https://github.com/kunalvarma05/dropbox-php-sdk
